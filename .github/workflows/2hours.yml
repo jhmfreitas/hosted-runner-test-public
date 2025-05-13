@@ -1,0 +1,17 @@
+name: 2 hours Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sleep-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Sleep for 2hours
+        run: sleep 7200
+
+      - name: Done
+        run: echo "Finished sleeping for 2hours!"
