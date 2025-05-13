@@ -1,4 +1,4 @@
-name: Two Minute Test
+name: 30 minutes Test
 
 on:
   workflow_dispatch:
@@ -10,8 +10,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Sleep for 2 minutes
-        run: sleep 120
+      - name: Sleep for 30 minutes
+        run: sleep 1800
 
       - name: Done
-        run: echo "Finished sleeping for 2 minutes!"
+        run: echo "Finished sleeping for 30 minutes!"
