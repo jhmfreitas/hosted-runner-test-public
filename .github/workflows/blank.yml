@@ -1,0 +1,17 @@
+name: Two Minute Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sleep-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Sleep for 2 minutes
+        run: sleep 120
+
+      - name: Done
+        run: echo "Finished sleeping for 2 minutes!"
